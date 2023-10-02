@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light switch</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .center {
+            display: block;
+            margin: auto;
+            padding: auto;
+            width: 25%;
+        }
+
+        .btn {
+            display: block;
+            margin:auto;
+            padding: 0.3em 1.2em;
+            align-items: center;
+            background-image: radial-gradient(gold , black) ;
+            border-radius: 25%;
+            font-weight: bold;
+            box-shadow: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img id="bulb" src="bulb off.jpg" alt="" class="center">
+    <button id="toggleBtn" class="btn">Turn On</button>
+
+
+    <script>
+        let btn = document.getElementById('toggleBtn');
+        let bulb = document.getElementById('bulb');
+        btn.addEventListener('click', toggleBulb)
+
+        function toggleBulb(e) {
+            if (btn.textContent.includes('On')) {
+                bulb.src = "bulb on .jpg"
+                btn.textContent = "Turn Off"
+            } else {
+                bulb.src = "bulb off.jpg"
+                btn.textContent = "Turn On"
+            }
+        }
+       
+    </script>
+</body>
+
+</html>
